@@ -12,7 +12,7 @@
 					<div class="title">
 						Web Users
 					</div>
-					<% if (locals.allUsers && locals.allUsers.length > 0) { %>
+					<% if (locals.getAllUsers && locals.getAllUsers.length > 0) { %>
 						<div class="table-container">
 							<table class="table is-bordered is-hoverable is-striped is-narrow">
 								<thead>
@@ -26,17 +26,17 @@
 								<tbody>
 									<% for(let i = 0; i < locals.allUsers.length; i++) { %>
 										<tr>
-											<td><%= locals.allUsers[i].web_user_id %></td>
-											<td><%= locals.allUsers[i].first_name %></td>
-											<td><%= locals.allUsers[i].last_name %></td>
-											<td><%= locals.allUsers[i].email %></td>
+											<td><%= locals.getAllUsers[i].web_user_id %></td>
+											<td><%= locals.getAllUsers[i].first_name %></td>
+											<td><%= locals.getAllUsers[i].last_name %></td>
+											<td><%= locals.getAllUsers[i].email %></td>
 										</tr>
 									<% } %>
 								</tbody>
 								<tfoot>
 									<tr>
 										<td colspan="4">	
-											There are <%= locals.allUsers.length %> web users.
+											There are <%= locals.getAllUsers.length %> web users.
 										</td>
 									</tr>
 								</tfoot>

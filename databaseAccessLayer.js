@@ -1,7 +1,7 @@
 const database = include('/databaseConnection');
 
 
-async function AllUsers() {
+async function getAllUsers() {
 	let sqlQuery = `
 		SELECT * FROM freedb_: comp2350-week2-A01323412.web_user;
 	`;
@@ -19,4 +19,4 @@ async function AllUsers() {
 }
 
 
-module.exports = {AllUsers}
+module.exports = {getAllUsers}

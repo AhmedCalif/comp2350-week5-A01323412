@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
 	console.log("page hit");
 	
 	try {
-		const result = await dbModel.AllUsers();
+		const result = await dbModel.getAllUsers();
 		res.render('index', {allUsers: result});
 
 		
