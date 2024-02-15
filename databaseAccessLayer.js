@@ -3,7 +3,7 @@ const database = include('/databaseConnection');
 
 async function getAllUsers() {
 	let sqlQuery = `
-		SELECT * FROM freedb_: comp2350-week2-A01323412.web_user;
+		SELECT * FROM web_user;
 	`;
 	
 	try {

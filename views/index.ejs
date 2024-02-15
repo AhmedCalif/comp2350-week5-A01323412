@@ -12,38 +12,30 @@
 					<div class="title">
 						Web Users
 					</div>
-					<% if (locals.getAllUsers && locals.getAllUsers.length > 0) { %>
+					<% if (locals.allUsers) { %>
 						<div class="table-container">
-							<table class="table is-bordered is-hoverable is-striped is-narrow">
-								<thead>
-									<tr>
-										<th> # </th>
-										<th> First Name </th>
-										<th> Last Name </th>
-										<th> Email </th>
-									</tr>
-								</thead>
-								<tbody>
-									<% for(let i = 0; i < locals.allUsers.length; i++) { %>
-										<tr>
-											<td><%= locals.getAllUsers[i].web_user_id %></td>
-											<td><%= locals.getAllUsers[i].first_name %></td>
-											<td><%= locals.getAllUsers[i].last_name %></td>
-											<td><%= locals.getAllUsers[i].email %></td>
-										</tr>
-									<% } %>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="4">	
-											There are <%= locals.getAllUsers.length %> web users.
-										</td>
-									</tr>
-								</tfoot>
-							</table>
+						<table class="table is-bordered is-hoverable is-striped is-narrow">
+							<thead>
+							<tr>
+								<th> # </th>
+								<th> Users </th>
+							</tr>
+							</thead>
+							<% let i=0; %>
+							<% for(i=0; i < allUsers.length; i++) { %>
+							<tr>
+								<td><%= allUsers[i].first_name %></td>
+								<td><%= allUsers[i].last_name %></td>
+								<td><%= allUsers[i].email %></td>
+							</tr>
+							<% } %>
+							<tfoot>
+								<tr> <td colspan="2">
+								There are <%= i %> users.
+								</td> </tr>
+							</tfoot>
+						</table>
 						</div>
-					<% } else { %>
-						<p>No web users found.</p>
 					<% } %>
 				</div>
 			</div>
